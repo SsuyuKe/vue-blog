@@ -1,6 +1,7 @@
 <script setup>
 import { defineProps, defineEmits } from 'vue'
 import { message } from 'ant-design-vue';
+import { formatDate } from '@/utils/time'
 
 defineProps({
   id: {
@@ -57,7 +58,7 @@ const copy = (id) => {
       <img class="w-6 h-6 inline-block mr-2 object-cover rounded-full" :src="avatar" alt="image" />
       <span>{{ theme }}</span>
       <span>．</span>
-      <span>{{ time }}</span>
+      <span>{{ formatDate(time) }}</span>
     </div>
     <div class="flex justify-between">
       <div class="w-[504px]">

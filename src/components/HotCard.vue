@@ -1,6 +1,6 @@
 <script setup>
 import { defineProps, defineEmits, ref } from 'vue'
-
+import { formatDate } from '@/utils/time'
 defineProps({
   id: {
     type: Number,
@@ -65,7 +65,7 @@ const collect = (id) => {
           alt="logo" />
         <span>{{ author }}</span>
         <span>・</span>
-        <span>{{ time }}</span>
+        <span>{{ formatDate(time) }}</span>
       </div>
       <p class='whitespace-nowrap text-ellipsis overflow-hidden'>{{ title }}</p>
       <div class='mt-9 flex justify-between'>

@@ -7,3 +7,8 @@
 * {
   box-sizing: border-box;
 }
+
+.darkMode {
+  background-color: black;
+  color: white;
+}
